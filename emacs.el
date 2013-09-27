@@ -1,7 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d/plugins")
-(load "whitespace.el")
 
 (global-linum-mode t)
+(setq column-number-mode t)
 
 (require 'xcscope)
 
