@@ -2,6 +2,7 @@
 
 (global-linum-mode t)
 (setq column-number-mode t)
+(menu-bar-mode nil)
 
 (require 'xcscope)
 

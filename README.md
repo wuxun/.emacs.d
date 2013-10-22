@@ -4,8 +4,5 @@
 config of emacs
 
 USAGE
-add:
 
-(load "~/.emacs.d/emacs.el")
-
-to your "~/.emacs" and start your emacs
+just clone this to your home directory and start emacs^_^
