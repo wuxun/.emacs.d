@@ -11,6 +11,8 @@
 (require 'iswitchb)
 (iswitchb-default-keybindings)
 
+(display-time-mode 1)
+
 (global-set-key (kbd "RET") 'newline-and-indent)
 
 (add-hook 'c-mode-hook (lambda()
