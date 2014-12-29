@@ -9,3 +9,7 @@
               "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
+
+;;for emacs-color-theme-solarized
+(add-to-list 'custom-theme-load-path "~/.emacs.d/plugins/emacs-color-theme-solarized")
+(load-theme 'solarized-dark t)
