@@ -21,3 +21,9 @@
                             (setq indent-tabs-mode nil)
                             (setq nxml-child-indent 4)
                             (setq nxml-attribute-indent 4)))
+
+;; common lisp
+(add-hook 'lisp-mode-hook
+	  (lambda ()
+	    (set (make-local-variable 'lisp-indent-function)
+		 'common-lisp-indent-function)))
