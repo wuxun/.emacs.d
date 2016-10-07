@@ -1,4 +1,3 @@
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -19,7 +18,9 @@
 (load "~/.emacs.d/misc.el")
 (load "~/.emacs.d/plugins.el")
 
-(setq exec-path (append exec-path '("/usr/local/bin/")))
+;;(setq exec-path (append exec-path '("/usr/local/bin/")))
+(setenv "PATH" (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -31,7 +32,7 @@
  '(haskell-process-type (quote ghci))
  '(package-selected-packages
    (quote
-    (yasnippet auto-complete window-numbering solarized-theme flycheck-haskell))))
+    (graphviz-dot-mode magit yasnippet auto-complete window-numbering solarized-theme flycheck-haskell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
