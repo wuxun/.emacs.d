@@ -32,3 +32,16 @@
 
 ;;magit
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;;helm
+(require 'helm)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(when (executable-find "ack-grep")
+  (setq helm-grep-default-command "ack-grep -Hn --no-group --no-color %e %p %f"
+        helm-grep-default-recurse-command "ack-grep -H --no-group --no-color %e %p %f"))
+
+;;expand-region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)

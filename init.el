@@ -32,7 +32,7 @@
  '(haskell-process-type (quote ghci))
  '(package-selected-packages
    (quote
-    (graphviz-dot-mode magit yasnippet auto-complete window-numbering solarized-theme flycheck-haskell))))
+    (expand-region helm graphviz-dot-mode magit yasnippet auto-complete window-numbering solarized-theme flycheck-haskell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
