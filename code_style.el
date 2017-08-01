@@ -27,3 +27,6 @@
 	  (lambda ()
 	    (set (make-local-variable 'lisp-indent-function)
 		 'common-lisp-indent-function)))
+
+;; org auto newline
+(add-hook 'org-mode-hook (lambda () (setq toggle-truncate-lines t)))

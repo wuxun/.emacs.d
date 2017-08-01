@@ -21,21 +21,29 @@
 ;;(setq exec-path (append exec-path '("/usr/local/bin/")))
 (setenv "PATH" (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
 
-(custom-set-variables
+;;(custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(haskell-process-auto-import-loaded-modules t)
- '(haskell-process-log t)
- '(haskell-process-suggest-remove-import-lines t)
- '(haskell-process-type (quote ghci))
- '(package-selected-packages
-   (quote
-    (expand-region helm graphviz-dot-mode magit yasnippet auto-complete window-numbering solarized-theme flycheck-haskell))))
+ ;; '(haskell-process-auto-import-loaded-modules t)
+ ;; '(haskell-process-log t)
+ ;; '(haskell-process-suggest-remove-import-lines t)
+ ;; '(haskell-process-type (quote ghci))
+ ;; '(package-selected-packages
+ ;;   (quote
+ ;;    (expand-region helm graphviz-dot-mode magit yasnippet auto-complete window-numbering solarized-theme flycheck-haskell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (avy yasnippet window-numbering solarized-theme magit helm graphviz-dot-mode flycheck-haskell expand-region auto-complete))))
