@@ -13,6 +13,10 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;; You might already have this line
 
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
 (load "~/.emacs.d/interface.el")
 (load "~/.emacs.d/code_style.el")
 (load "~/.emacs.d/misc.el")
@@ -46,4 +50,4 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (avy yasnippet window-numbering solarized-theme magit helm graphviz-dot-mode flycheck-haskell expand-region auto-complete))))
+    (which-key avy yasnippet window-numbering solarized-theme magit helm graphviz-dot-mode flycheck-haskell expand-region auto-complete))))
