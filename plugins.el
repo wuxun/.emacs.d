@@ -40,3 +40,16 @@
   :ensure t
   :config
   (which-key-mode))
+
+(use-package try
+  :ensure t)
+
+(use-package rainbow-delimiters
+  :ensure t
+  :config
+  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
+
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
