@@ -12,6 +12,12 @@
 	 :ensure t
 	 :config
 	 (load-theme 'solarized-dark t))
+	 ;; (load-theme 'solarized-light t))
+
+;; (use-package monokai-theme
+;; 	 :ensure t
+;; 	 :config
+;; 	 (load-theme 'monokai t))
 
 (use-package window-numbering
   :ensure t
@@ -28,6 +34,17 @@
 	 ("C-x b" . helm-mini)
 	 ("C-x C-f" . helm-find-files)))
 
+(use-package helm-swoop
+  :ensure t
+  :bind (("M-i" . helm-swoop)))
+
+(use-package projectile
+  :ensure t
+  :config
+  (progn (projectile-global-mode t)
+	 (setq projectile-completion-system 'helm)
+	 (helm-projectile-on)))
+
 (use-package expand-region
   :ensure t
   :bind (("C-=" . er/expand-region)))
@@ -42,6 +59,9 @@
   (which-key-mode))
 
 (use-package try
+  :ensure t)
+
+(use-package ag
   :ensure t)
 
 (use-package rainbow-delimiters
