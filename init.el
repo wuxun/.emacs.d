@@ -23,7 +23,7 @@
 (load "~/.emacs.d/plugins.el")
 
 ;;(setq exec-path (append exec-path '("/usr/local/bin/")))
-(setenv "PATH" (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
+;;(setenv "PATH" (format "%s:%s" "/usr/local/bin" (getenv "PATH")))
 
 ;;(custom-set-variables
  ;; custom-set-variables was added by Custom.

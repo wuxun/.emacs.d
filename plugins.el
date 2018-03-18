@@ -53,6 +53,12 @@
   :ensure t
   :bind (("C-;" . avy-goto-char)))
 
+(use-package exec-path-from-shell
+  :ensure t
+  :config
+  (progn (when (memq window-system '(mac ns x))
+	     (exec-path-from-shell-initialize))))
+
 (use-package which-key
   :ensure t
   :config
@@ -73,3 +79,7 @@
   :ensure t
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
