@@ -8,16 +8,19 @@
   :config
   (yas-global-mode 1))
 
-(use-package solarized-theme
-	 :ensure t
-	 :config
-	 (load-theme 'solarized-dark t))
-	 ;; (load-theme 'solarized-light t))
-
-;; (use-package monokai-theme
+;; (use-package solarized-theme
 ;; 	 :ensure t
 ;; 	 :config
-;; 	 (load-theme 'monokai t))
+;; 	 (load-theme 'solarized-dark t))
+;; 	 ;; (load-theme 'solarized-light t))
+
+(use-package monokai-theme
+	 :ensure t
+	 :config
+	 (load-theme 'monokai t))
+
+(use-package cider
+  :ensure t)
 
 (use-package window-numbering
   :ensure t
@@ -38,12 +41,12 @@
   :ensure t
   :bind (("M-i" . helm-swoop)))
 
-(use-package projectile
-  :ensure t
-  :config
-  (progn (projectile-global-mode t)
-	 (setq projectile-completion-system 'helm)
-	 (helm-projectile-on)))
+;; (use-package projectile
+;;   :ensure t
+;;   :config
+;;   (progn (projectile-global-mode t)
+;; 	 (setq projectile-completion-system 'helm)
+;; 	 (helm-projectile-on)))
 
 (use-package expand-region
   :ensure t

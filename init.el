@@ -6,12 +6,17 @@
 
 ;;melpa
 (require 'package) ;; You might already have this line
+
+;; (setq url-proxy-services
+;;    '(("no_proxy" . "^\\(localhost\\|10\\..*\\|192\\.168\\..*\\)")
+;;      ("http" . "127.0.0.1:1087")
+;;      ("https" . "127.0.0.1:1087")))
+
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (when (< emacs-major-version 24)
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
-(package-initialize) ;; You might already have this line
 
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -49,5 +54,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (which-key avy yasnippet window-numbering solarized-theme magit helm graphviz-dot-mode flycheck-haskell expand-region auto-complete))))
+   '(erlang cider which-key avy yasnippet window-numbering solarized-theme magit graphviz-dot-mode flycheck-haskell expand-region auto-complete)))
