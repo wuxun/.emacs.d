@@ -8,6 +8,13 @@
   :config
   (yas-global-mode 1))
 
+(use-package paredit
+  :ensure t
+  :config
+  (add-hook 'cider-repl-mode-hook #'paredit-mode)
+  (add-hook 'cider-mode-hook #'paredit-mode)
+  (add-hook 'clojure-mode-hook #'paredit-mode))
+
 ;; (use-package solarized-theme
 ;; 	 :ensure t
 ;; 	 :config
@@ -15,9 +22,9 @@
 ;; 	 ;; (load-theme 'solarized-light t))
 
 (use-package monokai-theme
-	 :ensure t
-	 :config
-	 (load-theme 'monokai t))
+  :ensure t
+  :config
+  (load-theme 'monokai t))
 
 (use-package cider
   :ensure t)
@@ -60,7 +67,7 @@
   :ensure t
   :config
   (progn (when (memq window-system '(mac ns x))
-	     (exec-path-from-shell-initialize))))
+	   (exec-path-from-shell-initialize))))
 
 (use-package which-key
   :ensure t
