@@ -13,7 +13,11 @@
   :config
   (add-hook 'cider-repl-mode-hook #'paredit-mode)
   (add-hook 'cider-mode-hook #'paredit-mode)
-  (add-hook 'clojure-mode-hook #'paredit-mode))
+  (add-hook 'clojure-mode-hook #'paredit-mode)
+  (add-hook 'lisp-mode-hook #'paredit-mode)
+  (add-hook 'lisp-interaction-mode-hook #'paredit-mode)
+  (add-hook 'scheme-mode-hook #'paredit-mode)
+  (add-hook 'emacs-lisp-mode-hook #'paredit-mode))
 
 ;; (use-package solarized-theme
 ;; 	 :ensure t
