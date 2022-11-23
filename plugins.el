@@ -1,8 +1,7 @@
-(use-package auto-complete
-  :ensure t
-  :config
-  (ac-config-default))
+;;; package ---- plugins
+;;; Commentary:
 
+;;; Code:
 (use-package yasnippet
   :ensure t
   :config
@@ -97,3 +96,35 @@
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode))
+
+(use-package graphviz-dot-mode
+  :ensure t
+  :config
+  (setq graphviz-dot-indent-width 4))
+
+
+
+(use-package go-mode
+  :ensure t)
+
+(use-package eglot
+  :ensure t
+  :config
+  (add-hook 'clojure-mode-hook 'eglot-ensure)
+  (add-hook 'rust-mode-hook 'eglot-ensure)
+  (add-hook 'go-mode 'eglot-ensure))
+
+(defun project-find-go-module (dir)
+  (when-let ((root (locate-dominating-file dir "go.mod")))
+    (cons 'go-module root)))
+
+(cl-defmethod project-root ((project (head go-module)))
+  (cdr project))
+
+(add-hook 'project-find-functions #'project-find-go-module)
+
+(use-package rust-mode
+  :ensure t)
+
+(use-package neotree
+  :ensure t)
